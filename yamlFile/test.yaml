@@ -1,0 +1,85 @@
+#src/federatedscope/core/configs/cfg_data.py
+#src/federatedscope/core/configs/cfg_model.py
+use_gpu: True
+device: 2
+seed: 6
+federate:
+  mode: 'standalone'
+  make_global_eval: True
+  client_num: 10
+  total_round_num: 80 #-------------------------------------------------------------
+  method: fedsagegod
+#  criterion_num: F.smooth_l1_loss
+#  criterion_feat: GreedyLoss
+train:
+  # Number of local update steps
+  local_update_steps: 4
+  # Optimizer related options
+  optimizer:
+    # Learning rate
+    lr: 0.0015
+    # Weight decay
+    weight_decay: 0
+    # Optimizer type
+    type: Adam #SGD
+data:
+  root: data/
+  type: cora-inj-before #cora-inj-before #amazon #twitch-pt-inj-before #amazon #twitch-pt-inj-before, citeseer-inj-before
+  splitter: 'random_partition'
+  splitter_delta: 20
+    #  splitter_args: [{'alpha': 0.5}]
+  dgl: False
+  anomaly_type: 'cs'
+dataloader:
+  type: pyg
+  batch_size: 50
+model:
+  type: anemone
+  hidden: 64
+  dropout: 0.3
+  out_channels: 6
+  verbose: True
+  # cola
+  subgraph_size: 4
+  negsamp_ratio: 1
+  #The amount of contamination of the data set
+  contamination: 0.1
+  return_confidenc: True
+  # anemone
+  negsamp_ratio_patch: 1
+  negsamp_ratio_context: 1
+  alpha: 1
+
+fedsageplus:
+  num_pred: 5
+  gen_hidden: 64
+  hide_portion: 0.5
+  fedgen_epoch: 20 #pre_train------------------------------------------
+  loc_epoch: 3
+  a: 0.1
+  b: 0.3
+  c: 1.0
+
+#pygod:
+#  model: cola
+
+criterion:
+  model_type: 'BCEWithLogitsLoss' #'BCEWithLogitsLoss'
+  type: 'CrossEntropyLoss'  #federate-->fedsage+
+trainer:
+  type: fedAnemone #nodefullbatch_trainer
+eval:
+  # Frequency of evaluation
+  freq: 10  #----------------------------------------------------------------
+  # Evaluation metrics, accuracy and number of correct items
+  metrics: ['roc_auc','acc']
+  best_res_update_round_wise_key: test_roc_auc
+  split: ['test']
+
+wandb:
+  # ce0ee8de52b9937f2e4306b1081e21f08bf6409e
+  use: False
+  name_project: "fedsageGod"
+  name_user: "huifa"
+
+

@@ -1,0 +1,40 @@
+#data_common_config:
+#  datapath: './data'
+#  outbase: './outputs'
+#  convert_x: False
+#  overlap: False
+#  standardize: False
+PROTEINS_config:
+  num_clients: 10
+  epsilon1: 0.03
+  epsilon2: 0.06
+  seq_length: 10
+
+IMDB-BINARY_config:
+  num_clients: 10
+  epsilon1: 0.025
+  epsilon2: 0.045
+  seq_length: 5
+
+NCI1_config:
+  num_clients: 30
+  epsilon1: 0.04
+  epsilon2: 0.08
+  seq_length: 5
+
+#model_common_config:
+#  num_repeat: 1
+#  num_rounds: 200
+#  local_epoch: 1
+#  lr: 0.01
+#  weight_decay: 5e-4
+#  nlayer: 3
+#  hidden: 64
+#  dropout: 0.5
+#  batch_size: 128
+#  seed: 10
+
+model_common_config:
+  num_repeat: 1  #1
+  lr: 0.01  #2
+

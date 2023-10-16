@@ -1,0 +1,35 @@
+molecules_config:
+  num_clients: 1
+  epsilon1: 0.07
+  epsilon2: 0.28
+  seq_length: 5
+
+biochem_config:
+  num_clients: 2
+  epsilon1: 0.07
+  epsilon2: 0.35
+  seq_length: 5
+
+mix_config:
+  num_clients: 3
+  epsilon1: 0.08
+  epsilon2: 0.4
+  seq_length: 5
+
+#model_common_config:
+#  num_repeat: 5
+#  num_rounds: 200
+#  local_epoch: 1
+#  lr: 0.001
+#  weight_decay: 5e-4
+#  nlayer: 3
+#  hidden: 64
+#  dropout: 0.5
+#  batch_size: 128
+#  seed: 123
+
+model_common_config:
+  num_repeat: 5  #1
+  lr: 0.001  #2
+
+
