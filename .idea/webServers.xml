@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b5d7c153-9222-40a1-a98f-f557f06a3602" name="my-fed">
+        <fileTransfer rootFolder="/data6/huif/FL-code/my-Fed" accessType="SFTP" host="10.214.199.120" port="22" sshConfigId="96abeda7-ac43-4375-8193-2c0f4f86e90c" sshConfig="huif@10.214.199.120:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

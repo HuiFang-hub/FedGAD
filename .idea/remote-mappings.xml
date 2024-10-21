@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteMappingsManager">
+    <list>
+      <list>
+        <remote-mappings server-id="python@sftp://huif@10.214.199.120:22/data/huif/anaconda3/envs/fs/bin/python">
+          <settings>
+            <list>
+              <mapping local-root="$PROJECT_DIR$/../my-Fed" remote-root="/data6/huif/FL-code/my-Fed" />
+              <mapping local-root="$PROJECT_DIR$" remote-root="/data6/huif/FL-code/FedGAD" />
+            </list>
+          </settings>
+        </remote-mappings>
+      </list>
+    </list>
+  </component>
+</project>
