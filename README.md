@@ -12,8 +12,7 @@ FedGAD enables to collaboratively training of a global graph anomaly detection m
 - FedGAD employs multi-scale contrastive learning which includes both structure-level and contextual-level learning functions to detect graph anomalies in conditions where graph data are of imbalanced distributions.
 - Experimental results on benchmark datasets demonstrate the utility of FedGAD compared to baseline methods.
 
-
-
+![Framework](https://github.com/user-attachments/assets/dfead95d-7e84-4467-804a-184e1a965215)
 **Figure 1. An overview of FedGAD.**
 
 ## Results
